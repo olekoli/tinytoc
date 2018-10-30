@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var TocGenerator = /** @class */ (function () {
-    function TocGenerator(tocSource, tocTarget, _a) {
+var TinyToc = /** @class */ (function () {
+    function TinyToc(tocSource, tocTarget, _a) {
         var tags = _a.tags, listType = _a.listType, linkItems = _a.linkItems;
         this.tocSource = tocSource;
         this.tocTarget = tocTarget;
@@ -9,7 +9,7 @@ var TocGenerator = /** @class */ (function () {
         this.listType = listType ? listType : "ul";
         this.linkItems = linkItems ? linkItems : true;
     }
-    TocGenerator.prototype.generate = function () {
+    TinyToc.prototype.generate = function () {
         var _this = this;
         var tocContainer = document.querySelector("" + this.tocTarget);
         var sourceContainer = document.querySelector("" + this.tocSource);
@@ -67,7 +67,7 @@ var TocGenerator = /** @class */ (function () {
             mainListContainer.appendChild(h.elem);
         });
     };
-    TocGenerator.prototype.slugify = function (heading) {
+    TinyToc.prototype.slugify = function (heading) {
         var a = "àáäâãåèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;";
         var b = "aaaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------";
         var p = new RegExp(a.split("").join("|"), "g");
@@ -79,6 +79,6 @@ var TocGenerator = /** @class */ (function () {
             .replace(/\-\-+/g, "-") // es-lint-disable-line no-useless-escape
             .replace(/^-+/, "");
     };
-    return TocGenerator;
+    return TinyToc;
 }());
-exports.default = TocGenerator;
+exports.default = TinyToc;

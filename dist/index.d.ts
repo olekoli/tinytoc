@@ -1,4 +1,4 @@
-declare class TocGenerator {
+declare class TinyToc {
     tocSource: string;
     tocTarget: string;
     tocTags: any;
@@ -12,4 +12,4 @@ declare class TocGenerator {
     generate(): void;
     private slugify;
 }
-export default TocGenerator;
+export default TinyToc;

@@ -1,5 +1,5 @@
 
-class TocGenerator {
+class TinyToc {
 
     public tocSource: string;
     public tocTarget: string;
@@ -13,7 +13,7 @@ class TocGenerator {
         this.tocTarget = tocTarget;
         this.tocTags = tags ? tags : ["h2", "h3", "h4", "h5", "h6"];
         this.listType = listType ? listType : "ul";
-        this.linkItems = linkItems ? linkItems : true;
+        this.linkItems = typeof linkItems  === "undefined" ? true : linkItems;
     }
 
     public generate(): void {
@@ -90,4 +90,4 @@ class TocGenerator {
 }
 
 
-export default TocGenerator; 
+export default TinyToc; 
