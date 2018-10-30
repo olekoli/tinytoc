@@ -17,7 +17,7 @@ then create a new instance of TinyToc
 ```javascript
 const contentSelector = "#content"
 const targetSelector = "#toc"
-const toc = TinyToc(contentSelector, targetSelector, {})
+const toc = new TinyToc(contentSelector, targetSelector, {})
 ```
 
 and finally call generate function which would append Table of Contents to specified div 
@@ -49,7 +49,7 @@ linkItems | boolean | false | true | Specifies whether to create links to relate
 ### Example with additional settings
 ```javascript
 import TinyToc from 'tinytoc'
-const toc = TinyToc("#blog-post", "#blog-toc", {
+const toc = new TinyToc("#blog-post", "#blog-toc", {
     tags: ["h3", "h4"],
     linkType: "ol",
     linkItems: false
