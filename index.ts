@@ -30,7 +30,7 @@ class TocGenerator {
         }
 
         let mainListContainer = document.createElement(this.listType);
-
+        tocContainer.appendChild(mainListContainer);
         let topLevel: number;
         headings = headings.map((h: any, index: number) => {
             const level: number = parseInt(h.tagName[1], 10);
@@ -72,7 +72,6 @@ class TocGenerator {
 
             mainListContainer.appendChild(h.elem);
         });
-        tocContainer.appendChild(mainListContainer);
 
     }
 

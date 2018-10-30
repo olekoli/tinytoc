@@ -24,6 +24,7 @@ var TocGenerator = /** @class */ (function () {
             throw new Error("Did not find any headings (" + this.tocTags + ") in " + this.tocSource);
         }
         var mainListContainer = document.createElement(this.listType);
+        tocContainer.appendChild(mainListContainer);
         var topLevel;
         headings = headings.map(function (h, index) {
             var level = parseInt(h.tagName[1], 10);
@@ -65,7 +66,6 @@ var TocGenerator = /** @class */ (function () {
             }
             mainListContainer.appendChild(h.elem);
         });
-        tocContainer.appendChild(mainListContainer);
     };
     TocGenerator.prototype.slugify = function (heading) {
         var a = "àáäâãåèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;";

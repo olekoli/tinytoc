@@ -1,5 +1,5 @@
 {
-  "name": "smalltoc",
+  "name": "tinytoc",
   "version": "1.0.0",
   "description": "A very small Table of Contents generator based on h tags",
   "main": "dist/index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olekoli/smalltoc.git"
+    "url": "git+https://github.com/olekoli/tinytoc.git"
   },
   "author": "Oleksandr Oliynyk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olekoli/smalltoc/issues"
+    "url": "https://github.com/olekoli/tinytoc/issues"
   },
-  "homepage": "https://github.com/olekoli/smalltoc#readme",
+  "homepage": "https://github.com/olekoli/tinytoc#readme",
   "devDependencies": {
     "typescript": "^3.1.4"
   }
