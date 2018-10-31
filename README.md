@@ -51,7 +51,7 @@ linkItems | boolean | false | true | Specifies whether to create links to relate
 import TinyToc from 'tinytoc'
 const toc = new TinyToc("#blog-post", "#blog-toc", {
     tags: ["h3", "h4"],
-    linkType: "ol",
+    listType: "ol",
     linkItems: false
 })
 toc.generate()
