@@ -1,6 +1,6 @@
 {
   "name": "tinytoc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A very small Table of Contents generator based on h tags",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

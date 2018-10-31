@@ -7,7 +7,7 @@ var TinyToc = /** @class */ (function () {
         this.tocTarget = tocTarget;
         this.tocTags = tags ? tags : ["h2", "h3", "h4", "h5", "h6"];
         this.listType = listType ? listType : "ul";
-        this.linkItems = linkItems ? linkItems : true;
+        this.linkItems = typeof linkItems === "undefined" ? true : linkItems;
     }
     TinyToc.prototype.generate = function () {
         var _this = this;
